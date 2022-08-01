@@ -1,0 +1,12 @@
+[Unit]
+Description=Alarm Clock Service
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/home/pi/Documents/fastlane/alarm-clock
+ExecStart=/usr/bin/python3 alarm-clock.py
+
+[Install]
+WantedBy=multi-user.target
